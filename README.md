@@ -2,4 +2,6 @@
 
 New programming language
 
-> We are trying and will soon release a beta version of the language - Nick Inc.
+> Hooray!!!Beta versiaon added
+
+### You can download this repository and get the beta version in the attached zip archive
