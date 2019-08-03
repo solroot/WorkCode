@@ -1,0 +1,31 @@
+%YAML 1.2
+---
+#Author NickProgramm
+#Special for Nick Inc.
+name: WorkCode
+file_extensions: [c, workcode]
+scope: source.c
+
+contexts:
+  main:
+    - match: \b(printf|scanf|begin|end|if|else|switch|case|default|break|goto|return|for|while do|continue|typedef|sizeof|NULL|num|str|void|struct|union|enum|char|short|int|long|double|float|signed|unsigned|const|static|extern|auto|register|volatile)\b
+      scope: keyword.control.c
+    - match: '//'
+      scope: punctuation.definition.comment.example-c
+      push: line_comment
+      # Numbers
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.example-c
+
+  double_quoted_string:
+    - meta_scope: string.quoted.double.example-c
+    - match: '\\.'
+      scope: constant.character.escape.example-c
+    - match: '"'
+      scope: punctuation.definition.string.end.example-c
+      pop: true
+
+  line_comment:
+    - meta_scope: comment.line.example-c
+    - match: $
+      pop: true
