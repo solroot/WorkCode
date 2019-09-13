@@ -2,6 +2,8 @@
 
 New programming language
 
-> Hooray!!!Beta versiaon added
+# Soon
 
-### You can download this repository and get the beta version in the attached zip archive
+New IDE, new compiler, new syntax!!!
+
+NickProgramm
